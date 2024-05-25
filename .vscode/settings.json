@@ -1,0 +1,8 @@
+{
+  "dotnet.defaultSolution": "Leetcode.sln",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "dotnet.codeLens.enableReferencesCodeLens": false,
+  "gitlens.codeLens.enabled": false,
+  "cSpell.words": ["maxx", "patwari", "rahul"]
+}
