@@ -14,6 +14,7 @@
 
 1. Make your changes
 1. `$ dotnet build` OR `$ dotnet test` OR `$ dotnet run`
+   - Other options: `$ dotnet test --filter FullyQualifiedName~L0140` # to run tests only for a certain namespace
 
 In this way you can control the project via terminal. However, you cannot run a debug.
 
@@ -31,3 +32,4 @@ In this way you can control the project via terminal. However, you cannot run a 
 
 - Add breakpoints.
 - use Command Pallette > `Test: Debug All test` OR `Test: Debug Tests in Current File`
+  - Other options: `Test: Debug Last Run` OR `Test: Debug Failed Tests`
