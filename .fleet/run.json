@@ -1,0 +1,8 @@
+{
+  "configurations": [
+    {
+      "type": "dotnet-test-experimental",
+      "name": "Dotnet-test-experimental configuration"
+    }
+  ]
+}
