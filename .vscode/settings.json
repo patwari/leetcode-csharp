@@ -4,5 +4,5 @@
   "editor.formatOnType": false,
   "dotnet.codeLens.enableReferencesCodeLens": false,
   "gitlens.codeLens.enabled": false,
-  "cSpell.words": ["Lates", "maxx", "patwari", "rahul"]
+  "cSpell.words": ["Lates", "maxx", "patwari", "rahul", "subarrays"]
 }
