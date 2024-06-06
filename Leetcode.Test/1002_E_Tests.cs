@@ -1,19 +1,18 @@
+using TestUtils;
+
 namespace L1002;
 
-public class Tests
-{
+public class Tests {
     Solution solution = new();
 
     [Fact]
-    public void BasicSanityTests()
-    {
+    public void BasicSanityTests() {
         MainTest(new string[] { "bella", "label", "roller" }, new string[] { "e", "l", "l" }.ToList());
         MainTest(new string[] { "cool", "lock", "cook" }, new string[] { "c", "o" }.ToList());
     }
 
     [Fact]
-    public void EdgeCaseTests()
-    {
+    public void EdgeCaseTests() {
         // Single word - all characters should be returned
         MainTest(new string[] { "single" }, new string[] { "s", "i", "n", "g", "l", "e" }.ToList());
 
@@ -28,8 +27,7 @@ public class Tests
     }
 
     [Fact]
-    public void LongStringTests()
-    {
+    public void LongStringTests() {
         // Long strings with many characters
         string longString1 = new string('a', 1000) + new string('b', 1000);
         string longString2 = new string('a', 1000) + new string('c', 1000);
@@ -39,8 +37,7 @@ public class Tests
         MainTest(new string[] { longString1, longString2, longString3 }, correct);
     }
 
-    private void MainTest(string[] words, IList<string> correct)
-    {
+    private void MainTest(string[] words, IList<string> correct) {
         Assert.True(EqualUtil.IsEqualUnordered(solution.CommonChars(words), correct));
     }
 }

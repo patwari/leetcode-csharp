@@ -3,8 +3,7 @@ namespace aa;
 /// <summary>
 /// Represents a simple point in a 2D coordinate system.
 /// </summary>
-public class Point
-{
+public class Point {
     /// <summary>
     /// Gets or sets the X coordinate of the point.
     /// </summary>
@@ -18,8 +17,7 @@ public class Point
     /// <summary>
     /// Initializes a new instance of the <see cref="Point"/> class.
     /// </summary>
-    public Point()
-    {
+    public Point() {
         X = 0;
         Y = 0;
     }
@@ -29,8 +27,7 @@ public class Point
     /// </summary>
     /// <param name="x">The X coordinate of the point.</param>
     /// <param name="y">The Y coordinate of the point.</param>
-    public Point(int x, int y)
-    {
+    public Point(int x, int y) {
         X = x;
         Y = y;
     }
@@ -40,8 +37,7 @@ public class Point
     /// </summary>
     /// <param name="other">The other point.</param>
     /// <returns>The distance to the other point.</returns>
-    public double DistanceTo(Point other)
-    {
+    public double DistanceTo(Point other) {
         int dx = X - other.X;
         int dy = Y - other.Y;
         return Math.Sqrt(dx * dx + dy * dy);
@@ -51,8 +47,7 @@ public class Point
     /// Returns a string representation of the point.
     /// </summary>
     /// <returns>A string in the format (X, Y).</returns>
-    public override string ToString()
-    {
+    public override string ToString() {
         return $"({X}, {Y})";
     }
 }

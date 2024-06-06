@@ -10,33 +10,26 @@ namespace L1002;
 /// Make a central common char map.
 /// For each word, make a frequency map. Then update the central char map.
 /// </summary>
-public class Solution
-{
-    public IList<string> CommonChars(string[] words)
-    {
+public class Solution {
+    public IList<string> CommonChars(string[] words) {
         int[] central = new int[26];
 
-        for (int i = 0; i < words.Length; ++i)
-        {
+        for (int i = 0; i < words.Length; ++i) {
             int[] freq = new int[26];
-            foreach (char c in words[i])
-            {
+            foreach (char c in words[i]) {
                 freq[c - 'a']++;
             }
             if (i == 0)
                 central = freq;
-            else
-            {
+            else {
                 for (int j = 0; j < 26; ++j)
                     central[j] = Math.Min(central[j], freq[j]);
             }
         }
 
         List<string> output = new();
-        for (int i = 0; i < 26; ++i)
-        {
-            while (central[i] > 0)
-            {
+        for (int i = 0; i < 26; ++i) {
+            while (central[i] > 0) {
                 output.Add((char)(i + 'a') + "");
                 central[i]--;
             }
