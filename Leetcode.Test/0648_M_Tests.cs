@@ -2,6 +2,7 @@ namespace L0648;
 
 public class Tests {
     private Solution solution = new();
+    private Solution2 solution2 = new();
 
     [Fact]
     public void NoRootTest() {
@@ -22,5 +23,6 @@ public class Tests {
 
     private void MainTest(List<string> roots, string sentence, string correct) {
         Assert.Equal(solution.ReplaceWords(roots, sentence), correct);
+        Assert.Equal(solution2.ReplaceWords(roots, sentence), correct);
     }
 }
