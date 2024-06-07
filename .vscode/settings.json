@@ -4,5 +4,26 @@
   "editor.formatOnType": false,
   "dotnet.codeLens.enableReferencesCodeLens": false,
   "gitlens.codeLens.enabled": false,
-  "cSpell.words": ["Lates", "maxx", "patwari", "rahul", "subarrays"]
+  "files.exclude": {
+    "**/bin/": true,
+    "**/obj/": true
+  },
+  "cSpell.words": [
+    "Lates",
+    "maxx",
+    "patwari",
+    "rahul",
+    "subarrays",
+    "Collatz",
+    "inorder",
+    "Kadane",
+    "Lates",
+    "maxx",
+    "nums",
+    "postorder",
+    "preorder",
+    "subarray",
+    "subarrays",
+    "Xunit"
+  ]
 }
