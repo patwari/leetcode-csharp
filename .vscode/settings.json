@@ -9,21 +9,22 @@
     "**/obj/": true
   },
   "cSpell.words": [
-    "Lates",
-    "maxx",
-    "patwari",
-    "rahul",
-    "subarrays",
     "Collatz",
     "inorder",
     "Kadane",
     "Lates",
+    "Leetcode",
     "maxx",
     "nums",
+    "patwari",
     "postorder",
     "preorder",
+    "psum",
+    "rahul",
     "subarray",
     "subarrays",
+    "Submatrices",
+    "Submatrix",
     "Xunit"
   ]
 }
