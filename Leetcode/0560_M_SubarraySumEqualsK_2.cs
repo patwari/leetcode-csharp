@@ -21,6 +21,7 @@ public class Solution2 {
         int psum = 0;
         for (int right = 0; right < nums.Length; ++right) {
             psum += nums[right];
+            // CHECK: if sum [0 .. right] == target
             if (psum == k) ++total;
 
             if (map.TryGetValue(psum - k, out int val)) {
