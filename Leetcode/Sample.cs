@@ -1,4 +1,4 @@
-namespace aa;
+namespace Sample;
 
 /// <summary>
 /// Represents a simple point in a 2D coordinate system.

@@ -1,5 +1,3 @@
-using System.Runtime.InteropServices;
-
 namespace L0552;
 
 /// <summary>
