@@ -13,15 +13,6 @@ public static partial class EqualUtil {
         f.Sort();
         s.Sort();
 
-        for (int i = 0; i < f.Count; ++i) {
-            T? itemF = f[i];  // Nullable type annotation
-            T? itemS = s[i];  // Nullable type annotation
-
-            // Check for null references
-            if (itemF == null && itemS == null) continue;
-            if (itemF == null || itemS == null) return false;
-            if (!itemF.Equals(itemS)) return false;
-        }
-        return true;
+        return f.SequenceEqual(s);
     }
 }
