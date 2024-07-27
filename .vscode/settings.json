@@ -27,6 +27,7 @@
     "subarrays",
     "Submatrices",
     "Submatrix",
+    "Warshall",
     "Xunit"
   ]
 }
