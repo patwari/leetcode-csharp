@@ -11,9 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUtils", "TestUtils\TestUtils.csproj", "{2411007A-2339-4B8A-A6A5-857D2A954F1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCP", "DCP\DCP.csproj", "{785B6508-7208-47CC-8004-959DAB5A69E6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCP.Test", "DCP.Test\DCP.Test.csproj", "{93BD5D08-F446-43FF-8BDE-2CCE8840D408}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCP", "DCP\DCP.csproj", "{93BD5D08-F446-43FF-8BDE-2CCE8840D408}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

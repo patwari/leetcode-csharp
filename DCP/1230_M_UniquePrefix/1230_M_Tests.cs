@@ -5,8 +5,8 @@ public class Test {
 
 	[Fact]
 	public void SanityTest() {
-		string[] words = ["dog", "cat", "apple", "apricot", "fish"];
-		string[] correct = ["d", "c", "app", "apr", "f"];
+		string[] words = new string[] { "dog", "cat", "apple", "apricot", "fish" };
+		string[] correct = new string[] { "d", "c", "app", "apr", "f" };
 		MainTest(words, correct);
 	}
 
