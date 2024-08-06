@@ -19,10 +19,8 @@ public class TreeNode {
 
     public static TreeNode FromArray(int[] nums, int nullId = -1) {
 
-#pragma warning disable CS8603 // suppresses null reference return warning
         if (nums == null || nums.Length == 0) return null;
         if (nums[0] == nullId) return null;
-#pragma warning restore CS8603 // suppresses null reference return warning
 
         TreeNode root = new(nums[0]);
 

@@ -80,9 +80,7 @@ public class Solution {
         }
 
         if (ordered.Count != k)
-#pragma warning disable CS8603 // Possible null reference return.
             return null;
-#pragma warning restore CS8603 // Possible null reference return.
         return ordered.ToArray();
     }
 }

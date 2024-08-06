@@ -17,7 +17,6 @@ public class Solution {
         Stack<char> stack = new();
 
         int num = 1;
-        int idx = 0;
         for (int i = 0; i < pattern.Length; ++i, ++num) {
             if (pattern[i] == 'I') {
                 sb.Append((char)(num + '0'));

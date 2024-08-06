@@ -38,8 +38,6 @@ public class Solution {
         }
 
         // THIS should never reach
-#pragma warning disable CS8603 // Possible null reference return.
         return null;
-#pragma warning restore CS8603 // Possible null reference return.
     }
 }
