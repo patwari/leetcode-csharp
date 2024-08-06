@@ -4,3 +4,8 @@ csharp_new_line_before_open_brace = none
 csharp_new_line_before_else = false
 csharp_new_line_before_catch = false
 csharp_new_line_before_finally = false
+
+dotnet_diagnostic.CS8600.severity = none            # Converting null literal or possible null value to non-nullable type
+dotnet_diagnostic.CS8602.severity = none            # Dereference of a possibly null reference
+dotnet_diagnostic.CS8603.severity = none            # Possible null reference return
+dotnet_diagnostic.CS8604.severity = none            # Possible null reference argument
