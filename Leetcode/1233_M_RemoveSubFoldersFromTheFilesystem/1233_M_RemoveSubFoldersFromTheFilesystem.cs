@@ -1,4 +1,5 @@
 namespace L1233;
+
 /// <summary>
 /// Given a list of folders folder, return the folders after removing all sub-folders in those folders. \
 /// You may return the answer in any order.
@@ -25,16 +26,16 @@ public class Solution {
     }
 
     private class Trie {
-        public bool isTerminal = false;
+        internal bool isTerminal = false;
         // child folder name -> trie
-        public Dictionary<string, Trie> children = new Dictionary<string, Trie>();
-        public readonly string completePath;      // path including self and ancestors
+        internal Dictionary<string, Trie> children = new Dictionary<string, Trie>();
+        internal readonly string completePath;      // path including self and ancestors
 
-        public Trie(string completePath) {
+        internal Trie(string completePath) {
             this.completePath = completePath;
         }
 
-        public void Insert(string[] path, int idx) {
+        internal void Insert(string[] path, int idx) {
             // if (idx > path.Length)
             //     return;
 
@@ -58,7 +59,7 @@ public class Solution {
             }
         }
 
-        public void AddToList(List<string> output) {
+        internal void AddToList(List<string> output) {
             if (isTerminal) {
                 output.Add(completePath);
                 return;
