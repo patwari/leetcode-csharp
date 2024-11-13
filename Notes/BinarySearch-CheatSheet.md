@@ -10,11 +10,13 @@ Link: https://www.geeksforgeeks.org/variants-of-binary-search/
 3. Index of last occurrence of a key
    - `[ store index of == ]`
 4. Index of greatest element less than key
-   - `just return right` OR
-   - `[ store index of < ]`
+   - `[ store index of < ]` OR
+   - `just return right`
 5. Index of the least element greater than key
-   - `just return left` OR
-   - `[ store index of > ]`
+   - `[ store index of > ]` OR
+   - `just return left`
+
+Trick -> Just remember the sequence `=, =, =, <, >`
 
 ## Common Structure
 
@@ -51,6 +53,21 @@ return idx
 
 ## Template 04 = greatestLesser()
 
+- Approach - Using template structure
+
+```cpp
+int idx = -1
+while(left <= right) {
+    define mid
+    if([mid] < target) { // <- smaller
+        idx = mid
+        left = mid+1;
+        ...
+    } else if() {...}
+}
+return idx
+```
+
 - Approach: Just return right when done
 
 ```cpp
@@ -60,33 +77,7 @@ while(left <= right){
     else right = mid-1
 ```
 
-- Approach - Using template structure
-
-```cpp
-int idx = -1
-while(left <= right) {
-    define mid
-    if(mid < target) { // <- smaller
-        idx = mid
-        left = mid+1;
-        ...
-    } else if() {...}
-}
-return idx
-```
-
 ## Template 05 = leastBigger()
-
-- Approach: Just return left when done
-
-```cpp
-while(left <= right){
-    define mid
-    if ([mid] <= target) left = mid+1
-    else right = mid-1
-}
-return left;
-```
 
 - Approach - Using template structure
 
@@ -102,6 +93,17 @@ while(left <= right) {
     else if() {...}
 }
 return idx
+```
+
+- Approach: Just return left when done
+
+```cpp
+while(left <= right){
+    define mid
+    if ([mid] <= target) left = mid+1
+    else right = mid-1
+}
+return left;
 ```
 
 NOTE: Catch:
