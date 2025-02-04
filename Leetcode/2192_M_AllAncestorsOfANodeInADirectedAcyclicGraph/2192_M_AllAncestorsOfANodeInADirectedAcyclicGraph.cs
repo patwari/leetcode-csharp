@@ -47,14 +47,11 @@ public class Solution {
                 q.Enqueue(node.idx);
         }
 
-        Console.Write("");
-
         while (q.Count > 0) {
             int popped = q.Dequeue();
             HashSet<int> poppedAncestors = new();
             // add ancestors made from all of it's immediate parents
             foreach (int p in nodes[popped].immediateParents) {
-                Console.Write("");
                 // Add immediate parents
                 poppedAncestors.Add(p);
                 // Add parents' ancestors as well
@@ -66,7 +63,6 @@ public class Solution {
             var temp = poppedAncestors.ToList();
             temp.Sort();
             output[popped] = temp;
-            Console.Write("");
 
             // reduce all children's incoming
             foreach (int c in nodes[popped].immediateChildren) {

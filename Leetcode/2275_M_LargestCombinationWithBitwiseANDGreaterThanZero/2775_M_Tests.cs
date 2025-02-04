@@ -19,7 +19,7 @@ public class Test {
             Convert.ToInt32("10000000000000000000000011101000",  2),
         }, 0);
     }
-    
+
     [Fact]
     public void SanityTest_02() {
         MainTest(new int[] {

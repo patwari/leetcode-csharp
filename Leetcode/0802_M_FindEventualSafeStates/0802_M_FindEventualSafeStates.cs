@@ -48,7 +48,6 @@ public class Solution {
                     next[i] = null;
                 }
             }
-            Console.Write("");
             // traverse backwards from these terminals the edges, and remove the connecting edges.
             while (q.Count > 0) {
                 int to = q.Dequeue();
@@ -66,7 +65,6 @@ public class Solution {
                         next[from] = null;
                     }
                 }
-                Console.Write("");
             }
         } while (found);
 

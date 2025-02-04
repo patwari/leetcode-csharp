@@ -10,14 +10,14 @@ namespace L2275;
 public class Solution {
     public int LargestCombination(int[] candidates) {
         Pair[] map = new Pair[32];
-        for (int i = 0; i < 32; i++) 
+        for (int i = 0; i < 32; i++)
             map[i] = new Pair();
 
         foreach (int num in candidates) {
             for (int i = 0; i < 31; ++i) {      // not checking the LEFT most bit = sign bit
                 if ((num & (1 << i)) != 0) {
                     map[i].nums++;
-                    if (num > 0) 
+                    if (num > 0)
                         map[i].positiveFound = true;
                 }
             }

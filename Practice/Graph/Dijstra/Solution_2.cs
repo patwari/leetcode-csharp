@@ -71,8 +71,6 @@ public class Solution2 {
                 minDist[next.Item1] = Math.Min(minDist[next.Item1], minDist[minDistIdx] + next.Item2);
                 pq.Enqueue(next.Item1, minDist[next.Item1]);
             }
-
-            Console.Write("");
         }
 
         // not reachable at all

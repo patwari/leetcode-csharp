@@ -33,7 +33,6 @@ public class Solution {
                 total += (long)r - l + 1;
 
             InsertAndSort(sorted, nums[i]);                     // O(n)
-            // Console.Write("");
         }
 
         return total;

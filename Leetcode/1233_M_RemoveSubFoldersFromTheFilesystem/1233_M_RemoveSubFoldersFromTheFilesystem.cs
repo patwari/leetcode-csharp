@@ -17,7 +17,6 @@ public class Solution {
         foreach (string path in folder) {
             string[] parts = path.Split('/');
             root.Insert(parts, 1);
-            Console.WriteLine();
         }
 
         List<string> output = new();

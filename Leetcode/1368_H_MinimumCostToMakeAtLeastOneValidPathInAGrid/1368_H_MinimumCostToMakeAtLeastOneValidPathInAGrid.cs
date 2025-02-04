@@ -57,7 +57,6 @@ public class Solution {
                 if (nextDist < minDist[nextX][nextY]) {
                     pq.Enqueue(new(nextX, nextY), nextDist);
                     minDist[nextX][nextY] = nextDist;
-                    Console.Write("");
                 }
             }
         }

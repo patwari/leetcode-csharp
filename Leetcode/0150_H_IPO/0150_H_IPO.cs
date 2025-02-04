@@ -49,7 +49,6 @@ public class Solution {
                 return currW;
             currW += profits[mostProfitableI];
             remainIdx.Remove(mostProfitableI);
-            Console.Write("");
         }
 
         return currW;

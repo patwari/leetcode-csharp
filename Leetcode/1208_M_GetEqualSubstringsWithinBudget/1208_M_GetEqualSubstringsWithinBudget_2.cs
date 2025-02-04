@@ -37,21 +37,17 @@ public class Solution2 {
                 // CHECK: if no chars added, add a new char
                 ++right;
                 runningCost += costPerChar[right];
-                Console.Write("");
             } else if (runningCost <= maxCost && right < s.Length - 1) {
                 // CHECK: if need to expand the window
                 ++right;
                 runningCost += costPerChar[right];
-                Console.Write("");
             } else {
                 // CHECK: if need to reduce the window
                 runningCost -= costPerChar[left];
                 ++left;
-                Console.Write("");
             }
             if (runningCost <= maxCost)
                 max = Math.Max(max, right - left + 1);
-            Console.Write("");
         }
         return max;
     }

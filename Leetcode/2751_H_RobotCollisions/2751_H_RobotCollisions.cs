@@ -23,8 +23,6 @@ public class Solution {
 
         Array.Sort(items, (a, b) => a.pos - b.pos);
 
-        Console.Write("");
-
         // stack will contain Items of only -> robots
         Stack<Item> stack = new();
         int[] output = new int[N];
@@ -33,15 +31,11 @@ public class Solution {
             DO(items[i], stack, output);
         }
 
-        Console.Write("");
-
         // now stack only contains -> robots 
         while (stack.Count > 0) {
             Item popped = stack.Pop();
             output[popped.initIdx] = popped.health;
         }
-
-        Console.Write("");
 
         List<int> toReturn = new();
         for (int i = 0; i < N; ++i) {

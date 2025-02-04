@@ -12,7 +12,7 @@ public class Solution {
     /// <returns></returns>
     public int Search(string str, string pattern) {
         var a = PreProcess("aabaacaadaabaaba");
-        Console.WriteLine($"" + string.Join(", ", a));
+        Console.WriteLine(string.Join(", ", a));
         return -1;
     }
 

@@ -31,7 +31,6 @@ public class Solution2 {
 
             if (r >= l)     // frankly this check is unnecessary, since it will be handled in Binary Search. Just a precaution. 
                 total += (long)r - l + 1;
-            // Console.Write("");
         }
 
         return total;

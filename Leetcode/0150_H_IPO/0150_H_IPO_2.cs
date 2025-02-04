@@ -35,7 +35,6 @@ public class Solution2 {
             if (byProfitMaxPq.Count == 0)
                 return currW;
             currW += profits[byProfitMaxPq.Dequeue()];
-            Console.Write("");
         }
         return currW;
     }

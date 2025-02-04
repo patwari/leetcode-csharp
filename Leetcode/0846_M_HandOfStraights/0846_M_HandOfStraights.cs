@@ -39,7 +39,6 @@ public class Solution {
         while (freq.Count > 0) {
             int anyVal = freq.First().Key;
             int left = anyVal;
-            Console.Write("");
             // Find the LEFT
             while (freq.ContainsKey(left - 1)) {
                 --left;
@@ -48,7 +47,6 @@ public class Solution {
             for (int start = left; start <= anyVal; ++start) {
                 // remove all sequences starting from START
                 while (freq.ContainsKey(start)) {
-                    Console.Write("");
                     for (int next = start; next <= start + groupSize - 1; ++next) {
                         // CHECK: sequence started but could not be completed
                         if (!freq.ContainsKey(next))

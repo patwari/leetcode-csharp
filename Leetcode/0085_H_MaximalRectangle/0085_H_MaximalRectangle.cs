@@ -28,7 +28,6 @@ public class Solution {
             for (int j = 0; j < cols; ++j) {
                 int width = (ngeRight[j] - 1) - (ngeLeft[j] + 1) + 1;
                 maxx = Math.Max(maxx, width * heights[j]);
-                Console.Write("");
             }
         }
 

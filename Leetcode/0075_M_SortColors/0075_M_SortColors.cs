@@ -30,7 +30,6 @@ public class Solution {
                 right--;
             }
         }
-        Console.Write("");
     }
 
     private void Swap(int[] nums, int i, int j) {
