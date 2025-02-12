@@ -1,5 +1,7 @@
 # C# with VSCode, xUnit, and internal debugger
 
+This document contains list of steps to setup dotnet with vscode. Primarily this is for my own use, and may not contain the best of approaches!! 
+
 ## Setup Approach 01: Command line
 
 1. `$ dotnet new console -n Leetcode`  
@@ -45,7 +47,8 @@ Create 2 separate projects - both console and test. And then move the Test proje
 ## Setup Approach 03: via VS-Code
 
 1. install C# Dev Kit and [formulahendry.dotnet-test-explorer](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer) extension.
-1. Open vscode into new folder
+1. This will automatically install a latest version of dotnet. If not -> manually download LTS from https://dotnet.microsoft.com/en-us/download and install it.
+1. Open vscode into new folder.
 1. Command Pallette > `.NET new project` > `Console App` > Folder name = `Leetcode`  
    It will create a new folder `Leetcode\`, along with other settings as well.
 1. Command Pallette > `.NET new project` > `xUnity New Project` > Folder name = `Leetcode.Test`
@@ -75,3 +78,24 @@ NOTE: However, you cannot run a debug via command line.
 - Add breakpoints.
 - use Command Pallette > `Test: Debug All test` OR `Test: Debug Tests in Current File`
   - Other options: `Test: Debug Last Run` OR `Test: Debug Failed Tests`
+
+## Additional Notes:
+- For some reason, the dotnet installed via homebrew didn't work for me.
+   - `brew install dotnet` would install dotnet, and even run the tests. But wasn't able to debug.
+   - `brew install --cask dotnet-sdk` also didn't
+
+## To Upgrade dotnet version
+1. Download from https://dotnet.microsoft.com/en-us/download. And install.
+1. Following commands are useful to check
+   - `which dotnet`
+   - `dotnet --list-sdks`
+   - `dotnet --version`
+1. You can upgrade your project by
+   1. Using Dotnet upgrade-assistant
+      - `dotnet tool install -g upgrade-assistant`
+      - `upgrade-assistant upgrade .` in project directory.
+   1. Manually (preferred)
+      - Open project in vscode.
+      - Open all `*.csproj` files and replace TargetFramework to `net9.0` or whatever version you've updated to. Note, that it needs only 2 digits.
+      - `dotnet restore`
+      - `dotnet build`
