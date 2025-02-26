@@ -62,7 +62,6 @@ public class Solution {
         }
 
         throw new Exception("Should not reach here");
-        return -1;
     }
 
     private static string Hash(int x, int y) => $"{x},{y}";
