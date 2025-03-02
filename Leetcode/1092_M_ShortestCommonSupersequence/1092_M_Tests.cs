@@ -53,7 +53,6 @@ public class Test {
 
     private void MainTest(string first, string second, int correctLen) {
         string output = solution.ShortestCommonSupersequence(first, second);
-        Console.WriteLine($"{output}");
         Assert.Equal(correctLen, output.Length);
 
         Assert.True(IsSubsequence(output, first));
