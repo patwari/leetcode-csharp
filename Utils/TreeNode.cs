@@ -54,4 +54,6 @@ public class TreeNode {
 
         return root;
     }
+
+    public TreeNode? Clone() => new(val, left?.Clone(), right?.Clone());
 }
