@@ -29,7 +29,7 @@ public class Solution {
     }
 
     /// <summary>
-    /// Returns index of greatest smaller number or equal using Template 04
+    /// Returns index of greatest smaller number or equal using Template 04 (Now template 02)
     /// This index will be used as the right boundary
     /// </summary>
     /// <param name="n"></param>
