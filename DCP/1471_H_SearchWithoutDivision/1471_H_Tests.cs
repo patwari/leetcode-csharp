@@ -1,7 +1,8 @@
-namespace BinarySearch;
+namespace D1471;
 
-public class Test01 {
-    private Template01 solution = new();
+
+public class Test {
+    private Solution solution = new();
     private Random random = new();
 
     [Fact]
