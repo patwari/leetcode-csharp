@@ -60,7 +60,7 @@ public class Solution2 {
             Add(memory[n][1][0], memory[n][1][1], memory[n][1][2]));
     }
 
-    private static int Add(int a, int b) => (a + b) % MOD;
-    private static int Add(int a, int b, int c) => (((a + b) % MOD) + c) % MOD;
-    private static int Add(int a, int b, int c, int d) => (Add(a, b) + Add(c, d)) % MOD;
+    private static int Add(long a, int b) => (int)((a + b) % MOD);
+    private static int Add(long a, int b, int c) => (int)((((a + b) % MOD) + c) % MOD);
+    private static int Add(long a, int b, int c, int d) => Add(Add(a, b), Add(c, d)) % MOD;
 }
