@@ -31,11 +31,8 @@ public class Solution {
                 // insert this into next line
                 output.Add(sb.ToString());
                 sb = new(p);
-                Console.Write("");
             }
         }
-
-        Console.Write("");
 
         if (sb.Length > 0) {
             output.Add(sb.ToString());

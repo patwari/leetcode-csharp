@@ -39,7 +39,6 @@ public class Solution {
                 ++idx;      // skip `[`
                 string inner = Decode(s, ref idx);
                 ++idx;      // skip `]`
-                Console.Write("");
                 for (int i = 0; i < num; ++i) {
                     sb.Append(inner);
                 }

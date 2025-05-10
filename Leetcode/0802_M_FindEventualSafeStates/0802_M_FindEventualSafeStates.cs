@@ -16,8 +16,8 @@ namespace L0802;
 public class Solution {
     public IList<int> EventualSafeNodes(int[][] graph) {
         int N = graph.Length;
-        HashSet<int>[] next = new HashSet<int>[N];                // [i] = contains next nodes to jump to
-        HashSet<int>[] prv = new HashSet<int>[N];                 // [i] = contains nodes from where it can arrive
+        HashSet<int>?[] next = new HashSet<int>?[N];                // [i] = contains next nodes to jump to
+        HashSet<int>?[] prv = new HashSet<int>?[N];                 // [i] = contains nodes from where it can arrive
         // NOTE: next[i].Count == 0 => means it recently became 0, after edge deletion.
         // next[i] == null, means it has been processed and maybe added to the output.
 

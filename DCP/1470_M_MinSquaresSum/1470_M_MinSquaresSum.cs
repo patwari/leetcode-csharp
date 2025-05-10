@@ -75,10 +75,6 @@ public class Solution {
             parts[i] = p;
         }
 
-        for (int i = 1; i <= N; ++i) {
-            Console.WriteLine($"{i} = [{string.Join(" + ", parts[i])}]");
-        }
-
         return dp[N];
     }
 }

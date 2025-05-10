@@ -18,11 +18,11 @@ public class Solution {
     /// </summary>
     /// <param name="node"></param>
     /// <returns></returns>
-    private Tuple<int, TreeNode> Bfs(TreeNode node) {
+    private Tuple<int, TreeNode?> Bfs(TreeNode node) {
         if (node == null) return new(0, null);
         if (node.left == null && node.right == null) return new(1, node);
-        Tuple<int, TreeNode> l = Bfs(node.left);
-        Tuple<int, TreeNode> r = Bfs(node.right);
+        Tuple<int, TreeNode?> l = Bfs(node.left);
+        Tuple<int, TreeNode?> r = Bfs(node.right);
 
         // CHECK: if both l and r have same depth, assign self as LCA
         if (l.Item1 == r.Item1) return new(l.Item1 + 1, node);

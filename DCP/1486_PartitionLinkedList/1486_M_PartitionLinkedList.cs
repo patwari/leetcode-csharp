@@ -21,22 +21,18 @@ public class Solution {
         ListNode temp = head;
 
         while (temp != null) {
-            Console.Write("");
             if (temp.val < pivot) {
                 ListNode next = temp.next;
                 temp.next = null;
                 Append(ref lesserHead, temp);
                 lesserLast = temp;
                 temp = next;
-                Console.Write("");
             } else {
                 ListNode next = temp.next;
                 temp.next = null;
                 Append(ref greaterHead, temp);
                 temp = next;
-                Console.Write("");
             }
-            Console.Write("");
         }
 
         // CHECK: if NO lesser element exists

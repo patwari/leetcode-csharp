@@ -30,7 +30,6 @@ public class Solution {
                     operands.Push(float.Parse(pp));
                     break;
             }
-            Console.Write("");
         }
 
         return operands.Pop();

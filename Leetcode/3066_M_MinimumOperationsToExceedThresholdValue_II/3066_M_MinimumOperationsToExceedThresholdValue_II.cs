@@ -35,6 +35,7 @@ public class Solution {
             ++counter;
         }
 
-        return -1;
+        // following is unreachable
+        // return -1;
     }
 }

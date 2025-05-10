@@ -27,7 +27,6 @@ internal class Solution() {
             if (right < nums.Length)
                 minHeap.Insert(nums[right]);
             nums[i] = minHeap.GetMin();
-            Console.Write("");
         }
         return nums;
     }

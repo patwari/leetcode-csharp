@@ -40,7 +40,6 @@ public class Solution {
                     } else {
                         // means = still there are some places where we have >= 2 set bits. Need to shrink further.
                         ++left;
-                        Console.Write("");
                     }
                 }
             } else {

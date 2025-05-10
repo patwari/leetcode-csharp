@@ -23,9 +23,6 @@ public class Solution {
         if (swappedTop != -1) swappedTop += 1;
         if (swappedBottom != -1) swappedBottom += 1;
 
-        Console.WriteLine((normalTop, normalBottom));
-        Console.WriteLine((swappedTop, swappedBottom));
-
         // When No possible
         if (normalTop == -1 && normalBottom == -1 && swappedTop == -1 && swappedBottom == -1)
             return -1;

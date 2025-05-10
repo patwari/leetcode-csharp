@@ -23,13 +23,10 @@ public class Solution {
             nums[i] = old + (newVal * 1000);
         }
 
-        Console.Write("");
-
         // recover the new values
         for (int i = 0; i < nums.Length; ++i) {
             nums[i] /= 1000;
         }
-        Console.Write("");
 
         return nums;
     }

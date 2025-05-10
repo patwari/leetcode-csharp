@@ -43,8 +43,6 @@ public class Solution {
             --i;
         }
 
-        Console.Write("");
-
         // CHECK: all digits are in decreasing order. Hence no next permutation possible. 
         // Simply return the lowest ordering, which is = reverse of current arrangement
         if (i == -1) {
@@ -69,8 +67,6 @@ public class Solution {
             ++toTry;
         }
 
-        Console.Write("");
-
         // Step 2: swap 
         --freq[digits[idx]];                            // decrease freq of next greater
         if (!freq.ContainsKey(digits[i]))                // increase freq of [i]. Because that's how's gonna look like after swapping
@@ -79,9 +75,6 @@ public class Solution {
             freq[digits[i]]++;
 
         (digits[i], digits[idx]) = (digits[idx], digits[i]);
-
-
-        Console.Write("");
 
         // Step 3: Use bucket sort to sort the remaining digits to the right of i-index.
         toTry = 0;

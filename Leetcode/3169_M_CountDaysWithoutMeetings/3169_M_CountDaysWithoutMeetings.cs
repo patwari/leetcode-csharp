@@ -33,23 +33,18 @@ public class Solution {
                 if (currMeetingCount == 0) {
                     // new meeting is starting. Account for free days before it
                     free += Math.Max(0, dates[i].date - prvNoMeetingDate);
-                    Console.Write("");
                 }
                 ++currMeetingCount;
-                Console.Write("");
             } else {
                 --currMeetingCount;
-                Console.Write("");
                 if (currMeetingCount == 0) {
                     prvNoMeetingDate = dates[i].date + 1;
-                    Console.Write("");
                 }
             }
         }
 
         // add remaining date from last meeting over to end date
         free += Math.Max(0, days + 1 - prvNoMeetingDate);
-        Console.Write("");
 
         // Console.WriteLine(dates[0].date + " :: " + dates[0].isStart );
 

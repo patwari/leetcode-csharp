@@ -65,8 +65,6 @@ public class Solution {
             }
         }
 
-        Console.Write("");
-
         StringBuilder sb = new(gravity.Length);
         for (int i = 0; i < gravity.Length; ++i) {
             if (gravity[i] == 0) {

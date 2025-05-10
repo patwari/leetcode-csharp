@@ -8,7 +8,7 @@ namespace L1780;
 /// Approach: Math. O(log(20))
 /// </summary>
 public class Solution {
-    private static int[] p3 = null;
+    private static int[]? p3 = null;
     public bool CheckPowersOfThree(int n) {
         InitIfNeeded();
         if (n == 1) return true;
@@ -65,7 +65,6 @@ public class Solution {
             for (int i = 1; i <= 19; ++i) {
                 p3[i] = p3[i - 1] * 3;
             }
-            // Console.WriteLine("init = " + string.Join(",",p3));
         }
     }
 }
