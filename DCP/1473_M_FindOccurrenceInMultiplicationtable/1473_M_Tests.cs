@@ -1,7 +1,11 @@
+using System.Diagnostics;
+
 namespace D1473;
 
 public class Test {
     private Solution solution = new();
+    private Solution2 solution2 = new();
+    private Random random = new();
 
     [Fact]
     public void SanityTest() {
@@ -67,7 +71,70 @@ public class Test {
         MainTest(5, 9, 1); // Only 3x3
     }
 
-    private void MainTest(int n, int x, int correct) {
-        Assert.Equal(correct, solution.CountOccurrence(n, x));
+    [Fact]
+    public void DelayTest() {
+        Dictionary<int, int[]> optionsN = new(200);
+        for (int test = 0; test < 200; ++test) {
+            int N = random.Next(1000);
+            while (optionsN.ContainsKey(N)) {
+                N = random.Next(1000);
+            }
+            optionsN[N] = new int[30];
+
+            for (int i = 0; i < 30; ++i) {
+                optionsN[N][i] = random.Next(2 * N);
+            }
+        }
+
+        Stopwatch s1 = Stopwatch.StartNew();
+        foreach (KeyValuePair<int, int[]> kv in optionsN) {
+            foreach (int X in kv.Value) {
+                MainTest(kv.Key, X, true);
+            }
+        }
+        s1.Stop();
+
+        Stopwatch s2 = Stopwatch.StartNew();
+        foreach (KeyValuePair<int, int[]> kv in optionsN) {
+            foreach (int X in kv.Value) {
+                MainTest(kv.Key, X, true);
+            }
+        }
+        s2.Stop();
+        Console.WriteLine($"TimeTaken :: first = {s1.ElapsedMilliseconds} ms :: second = {s2.ElapsedMilliseconds} ms");
+    }
+
+    // [Fact]
+    // public void RandomTest() {
+    //     for (int test = 0; test < 100; ++test) {
+    //         int N = random.Next(1000);
+    //         for (int i = 0; i < 30; ++i) {
+    //             int X = random.Next(2 * N);
+    //             MainTest(N, X, GetCorrect(N, X));
+    //         }
+    //     }
+    // }
+
+    private int GetCorrect(int N, int X) {
+        int count = 0;
+        for (int i = 1; i <= N; ++i) {
+            for (int j = 1; j <= N; ++j) {
+                if (i * j == X)
+                    ++count;
+            }
+        }
+        return count;
+    }
+
+    // checkFirstSol = 0 => means check 1st. 1 = check second. 2 = check both.
+    private void MainTest(int N, int X, bool checkFirstSol) {
+        int correct = GetCorrect(N, X);
+        if (checkFirstSol) Assert.Equal(correct, solution.CountOccurrence(N, X));
+        else Assert.Equal(correct, solution2.CountOccurrence(N, X));
+    }
+
+    private void MainTest(int N, int X, int correct) {
+        Assert.Equal(correct, solution.CountOccurrence(N, X));
+        Assert.Equal(correct, solution2.CountOccurrence(N, X));
     }
 }

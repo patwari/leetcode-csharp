@@ -32,23 +32,5 @@ public class Solution {
         }
 
         return count;
-
-        // int a = 1;
-
-        // for (; (a * a) < X && (a * a) < N; ++a) {
-        //     if (X % a == 0 && a <= N && (X / a) <= N) {
-        //         count += 2;            // for both [A, B] and [B, A]
-        //         // Console.WriteLine($"For N = {N} :: Found => {a} x {N / a} = {X}");
-        //     } else {
-        //         // Console.Write("");
-        //     }
-        // }
-
-        // // when N is a perfect square
-        // if (a * a == X && a <= N) {
-        //     // Console.WriteLine($"For N = {N} :: SQ Found => {a} x {N / a} = {X}");
-        //     ++count;            // when A x A = x
-        // }
-        // return count;
     }
 }
