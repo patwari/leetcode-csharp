@@ -10,9 +10,6 @@ namespace D1452;
 /// - I used my own heap implementation, because I wanted to revise it.
 /// </summary>
 internal class Solution() {
-    internal protected int a;
-    private MinHeap h = new(2);
-
     public int[] Sort(int[] nums, int k) {
         MinHeap minHeap = new MinHeap(k + 1);
 
