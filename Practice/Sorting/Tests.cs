@@ -24,11 +24,21 @@ public class Test {
     }
 
     private static void MainTest(List<int> list) {
-        List<int> correct = list.Clone();
-        correct.Sort();
+        List<int> ascending = list.Clone();
+        ascending.Sort();
 
         List<int> q = list.Clone();
         QuickSort.Sort(q);
-        Assert.Equal(correct, q);
+        Assert.Equal(ascending, q);
+
+        List<int> q2 = list.Clone();
+        QuickSort2.Sort(q2, (a, b) => a - b);
+        Assert.Equal(ascending, q);
+
+        List<int> descending = list.Clone();
+        descending.Sort((a, b) => b - a);
+        List<int> q3 = list.Clone();
+        QuickSort2.Sort(q3, (a, b) => b - a);
+        Assert.Equal(descending, q3);
     }
 }

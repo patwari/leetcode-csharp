@@ -1,6 +1,6 @@
 namespace Practice.Sorting;
 
-public partial class QuickSort {
+public class QuickSort {
     private static Lazy<Random> random = new();
 
     public static void Sort(List<int> list) {
