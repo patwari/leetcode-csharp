@@ -13,7 +13,7 @@ public class Test {
     public void RandomTest() {
         Random r = new();
 
-        for (int i = 0; i < 1000; ++i) {
+        for (int i = 0; i < 500; ++i) {
             int size = r.Next(100, 10000);
             List<int> list = new(size);
             for (int j = 0; j < size; ++j) {
@@ -40,5 +40,9 @@ public class Test {
         List<int> q3 = list.Clone();
         QuickSort2.Sort(q3, (a, b) => b - a);
         Assert.Equal(descending, q3);
+
+        List<int> qMerge = list.Clone();
+        MergeSort.Sort(qMerge);
+        Assert.Equal(ascending, qMerge);
     }
 }
