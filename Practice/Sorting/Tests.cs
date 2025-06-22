@@ -13,7 +13,7 @@ public class Test {
     public void RandomTest() {
         Random r = new();
 
-        for (int i = 0; i < 500; ++i) {
+        for (int i = 0; i < 10; ++i) {
             int size = r.Next(100, 10000);
             List<int> list = new(size);
             for (int j = 0; j < size; ++j) {
@@ -22,6 +22,30 @@ public class Test {
             MainTest(list);
         }
     }
+
+    // [Fact]
+    // public void TimedTest() {
+    //     Random r = new();
+    //     List<List<int>> lists = new();
+
+    //     for (int i = 0; i < 500; ++i) {
+    //         int size = r.Next(100, 10000);
+    //         List<int> list = new(size);
+    //         for (int j = 0; j < size; ++j) {
+    //             list.Add(r.Next(-500, 500));
+    //         }
+    //         lists.Add(list);
+    //     }
+
+    //     System.Diagnostics.Stopwatch st = System.Diagnostics.Stopwatch.StartNew();
+    //     foreach (List<int> l in lists) {
+    //         QuickSort.Sort(l);
+    //     }
+    //     st.Stop();
+    //     float timeQuickSort = st.ElapsedMilliseconds;
+
+    //     Console.WriteLine($"QuickSort = {timeQuickSort} ms");
+    // }
 
     private static void MainTest(List<int> list) {
         List<int> ascending = list.Clone();
@@ -52,5 +76,21 @@ public class Test {
         List<int> merge_3 = list.Clone();
         MergeSort2.Sort(merge_3, (a, b) => b - a);
         Assert.Equal(descending, merge_3);
+
+        List<int> bubble = list.Clone();
+        BubbleSort.Sort(bubble);
+        Assert.Equal(ascending, bubble);
+
+        List<int> bubble2 = list.Clone();
+        BubbleSort2.Sort(bubble2, (a, b) => b - a);
+        Assert.Equal(descending, bubble2);
+
+        List<int> selection = list.Clone();
+        SelectionSort.Sort(selection);
+        Assert.Equal(ascending, selection);
+
+        List<int> insertion = list.Clone();
+        InsertionSort.Sort(insertion);
+        Assert.Equal(ascending, insertion);
     }
 }
