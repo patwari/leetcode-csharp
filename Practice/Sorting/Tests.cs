@@ -41,8 +41,16 @@ public class Test {
         QuickSort2.Sort(q3, (a, b) => b - a);
         Assert.Equal(descending, q3);
 
-        List<int> qMerge = list.Clone();
-        MergeSort.Sort(qMerge);
-        Assert.Equal(ascending, qMerge);
+        List<int> merge_1 = list.Clone();
+        MergeSort.Sort(merge_1);
+        Assert.Equal(ascending, merge_1);
+
+        List<int> merge_2 = list.Clone();
+        MergeSort2.Sort(merge_2, (a, b) => a - b);
+        Assert.Equal(ascending, merge_2);
+
+        List<int> merge_3 = list.Clone();
+        MergeSort2.Sort(merge_3, (a, b) => b - a);
+        Assert.Equal(descending, merge_3);
     }
 }
