@@ -4,6 +4,7 @@
   "editor.formatOnType": false,
   "dotnet.codeLens.enableReferencesCodeLens": false,
   "gitlens.codeLens.enabled": false,
+  "cSpell.language": "en, en-GB, en-US",
   "files.exclude": {
     "**/bin/": true,
     "**/obj/": true
