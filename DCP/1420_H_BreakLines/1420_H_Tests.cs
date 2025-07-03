@@ -28,7 +28,7 @@ public class Test {
         });
     }
 
-    private void MainTest(string str, int k, List<string> correct) {
+    private void MainTest(string str, int k, List<string>? correct) {
         Assert.Equal(correct, solution.GetMultiLines(str, k));
     }
 }

@@ -18,7 +18,7 @@ public class Test {
         MainTest(null, 10, null);
     }
 
-    private void MainTest(ListNode head, int pivot, ListNode correct) {
+    private void MainTest(ListNode? head, int pivot, ListNode? correct) {
         Assert.True(EqualUtil.IsEqual(correct, solution.PartitionByPivot(head, pivot)));
     }
 }

@@ -38,7 +38,7 @@ public class Test {
         MainTest(TreeNode.FromArray([1, 2, 3, 4, 5, 6, 7, -1, -1, 8, 9, -1, 10, -1, -1, -1, 11, -1, -1, 12, -1, -1, -1, -1, 13]), TreeNode.FromArray([1, 3, 2, 7, 6, 5, 4, -1, -1, 10, -1, 9, 8, -1, -1, -1, 12, -1, -1, 11, -1, 13]));
     }
 
-    private void MainTest(TreeNode root, TreeNode correct) {
+    private void MainTest(TreeNode? root, TreeNode? correct) {
         TreeNode root2 = root?.Clone();
         TreeNode correct2 = correct?.Clone();
         TreeNode root3 = root?.Clone();

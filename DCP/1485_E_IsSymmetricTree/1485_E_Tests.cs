@@ -85,7 +85,7 @@ public class Test {
         MainTest(root, true);
     }
 
-    private void MainTest(NTreeNode root, bool correct) {
+    private void MainTest(NTreeNode? root, bool correct) {
         Assert.Equal(correct, solution.IsSymmetric(root));
     }
 }

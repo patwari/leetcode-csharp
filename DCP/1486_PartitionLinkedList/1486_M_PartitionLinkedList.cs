@@ -43,7 +43,7 @@ public class Solution {
         return lesserHead;
     }
 
-    private void Append(ref ListNode head, ListNode node) {
+    private void Append(ref ListNode? head, ListNode node) {
         if (head == null) {
             head = node;
             return;
