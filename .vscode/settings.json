@@ -28,6 +28,7 @@
     "subarrays",
     "Submatrices",
     "Submatrix",
+    "Toeplitz",
     "Warshall",
     "Xunit"
   ]
