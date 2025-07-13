@@ -20,7 +20,6 @@ public class Solution {
         }
 
         throw new Exception("aise kaise?");
-        return path;
     }
 
     private List<int[]> GetSqPath(int r0, int c0, int rows, int cols, int diameter) {
