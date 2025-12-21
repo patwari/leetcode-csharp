@@ -15,6 +15,7 @@ public class Test {
         MainTest(0, ["aaaaa"]);
         MainTest(2, ["jwkwdc", "etukoz"]);
         MainTest(4, ["jwkwdc", "etakoz"]);
+        MainTest(3, ["abff", "acee", "bbce", "badf"]);
     }
 
     private void MainTest(int correct, string[] strs) {
