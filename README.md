@@ -1,6 +1,6 @@
 # C# with VSCode, xUnit, and internal debugger
 
-This document contains list of steps to setup dotnet with vscode. Primarily this is for my own use, and may not contain the best of approaches!! 
+This document contains list of steps to setup dotnet with vscode. Primarily this is for my own use, and may not contain the best of approaches!!
 
 ## Setup Approach 01: Command line
 
@@ -80,11 +80,13 @@ NOTE: However, you cannot run a debug via command line.
   - Other options: `Test: Debug Last Run` OR `Test: Debug Failed Tests`
 
 ## Additional Notes:
+
 - For some reason, the dotnet installed via homebrew didn't work for me.
-   - `brew install dotnet` would install dotnet, and even run the tests. But wasn't able to debug.
-   - `brew install --cask dotnet-sdk` also didn't
+  - `brew install dotnet` would install dotnet, and even run the tests. But wasn't able to debug.
+  - `brew install --cask dotnet-sdk` also didn't
 
 ## To Upgrade dotnet version
+
 1. Download from https://dotnet.microsoft.com/en-us/download. And install.
 1. Following commands are useful to check
    - `which dotnet`
@@ -96,6 +98,6 @@ NOTE: However, you cannot run a debug via command line.
       - `upgrade-assistant upgrade .` in project directory.
    1. Manually (preferred)
       - Open project in vscode.
-      - Open all `*.csproj` files and replace TargetFramework to `net9.0` or whatever version you've updated to. Note, that it needs only 2 digits.
+      - Open all `*.csproj` files and replace TargetFramework to `net10.0` or whatever version you've updated to. Note, that it needs only 2 digits.
       - `dotnet restore`
       - `dotnet build`
