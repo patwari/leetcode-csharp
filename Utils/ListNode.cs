@@ -17,4 +17,15 @@ public class ListNode {
             temp = temp.next;
         }
     }
+
+    public List<int> ToList() {
+        List<int> list = new();
+        list.Add(val);
+        ListNode temp = next;
+        while (temp != null) {
+            list.Add(temp.val);
+            temp = temp.next;
+        }
+        return list;
+    }
 }

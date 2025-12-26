@@ -92,5 +92,13 @@ public class Test {
         List<int> insertion = list.Clone();
         InsertionSort.Sort(insertion);
         Assert.Equal(ascending, insertion);
+
+        List<int> linkedListClone = list.Clone();
+        linkedListClone.Sort();
+        ListNode head = new ListNode(list.ToArray());
+        LinkedListUsingMergeSort s = new();
+        head = s.Sort(head);
+        List<int> outList = head.ToList();
+        Assert.Equal(linkedListClone, outList);
     }
 }
