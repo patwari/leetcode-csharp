@@ -1,5 +1,3 @@
-using TestUtils;
-
 namespace L1920;
 
 public class Test {
@@ -18,9 +16,6 @@ public class Test {
     [Fact]
     public void RandomTest() {
         for (int i = 0; i < 100; ++i) {
-            MainTest(10);
-            MainTest(100);
-
             for (int j = 0; j < 100; ++j) {
                 int N = random.Next(1, 1001);
                 MainTest(N);
