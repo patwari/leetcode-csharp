@@ -5,6 +5,7 @@
   "dotnet.codeLens.enableReferencesCodeLens": false,
   "gitlens.codeLens.enabled": false,
   "cSpell.language": "en, en-GB, en-US",
+  "autopep8.args": ["--max-line-length=200"],
   "files.exclude": {
     "**/bin/": true,
     "**/obj/": true
