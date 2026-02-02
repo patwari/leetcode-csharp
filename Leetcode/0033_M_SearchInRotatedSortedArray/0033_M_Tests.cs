@@ -2,6 +2,8 @@ namespace L0033;
 
 public class Test {
     private Solution solution = new();
+    private Solution2 solution2 = new();
+    private Solution3 solution3 = new();
 
     [Fact]
     public void SanityTest() {
@@ -12,7 +14,6 @@ public class Test {
 
     [Fact]
     public void SanityTest_02() {
-
         MainTest([0, 1, 2, 3, 4, 5]);
         MainTest([5, 0, 1, 2, 3, 4]);
         MainTest([4, 5, 0, 1, 2, 3]);
@@ -25,9 +26,14 @@ public class Test {
         for (int i = 0; i < nums.Length; ++i) {
             MainTest(nums, nums[i], i);
         }
+
+        MainTest(nums, nums.Max() + 1, -1);
+        MainTest(nums, nums.Min() - 1, -1);
     }
 
     private void MainTest(int[] nums, int target, int correct) {
         Assert.Equal(correct, solution.Search(nums, target));
+        Assert.Equal(correct, solution2.Search(nums, target));
+        Assert.Equal(correct, solution3.Search(nums, target));
     }
 }
