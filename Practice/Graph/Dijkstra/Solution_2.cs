@@ -1,11 +1,17 @@
 namespace Practice.Graph.Dijkstra;
 
 /// <summary>
-/// Complexity = O(V^2 log V)
-/// Pre process: List creation = O(V + E)
-/// Loop: for each V, pop + update each neighbor (insert) = V (log V + E * log V) = (V log V) + (VE log V)
-/// At worst case: E = V. So, worst case = is O(VV log V)
-/// Average: Usually, E is very less than V. Therefore average time = O(V log V + E Log V) = O((V+E) log V)
+/// Complexity = O((V+E) log V)
+/// There are 3 major operations:
+/// 1. Initial insert to PQ. O(V)
+/// 2. Build Heap. O(V)
+/// 2. Inside loop =>                    O(V)
+///     1. Pop min V                     O(log V)
+///     2. For all of it's neighbour put back to the PQ             O(V Log V)
+///
+/// So, overall complexity = O(V log V) + O(V log V) + O(V*V log V)
+/// On average, E (total number of edges) <= V*V.
+/// So, overall complexity become = O((V + E) log V)
 ///
 /// Approach: Dijkstra with Priority queue.
 /// 
