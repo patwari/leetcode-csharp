@@ -34,18 +34,18 @@ public class Solution {
         return minn;
     }
 
-    private Tuple<bool, List<int>> GetAddends(int target) {
+    private Tuple<bool, List<int>?> GetAddends(int target) {
         int i = 1;
         List<int> sq = [];
 
         while ((long)i * i <= target) {
             if ((long)i * i == target) {
-                return new Tuple<bool, List<int>>(true, null);
+                return new Tuple<bool, List<int>?>(true, null);
             }
             sq.Add(i * i);
             ++i;
         }
 
-        return new Tuple<bool, List<int>>(false, sq);
+        return new Tuple<bool, List<int>?>(false, sq);
     }
 }

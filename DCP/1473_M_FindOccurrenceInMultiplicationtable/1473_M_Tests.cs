@@ -101,7 +101,7 @@ public class Test {
             }
         }
         s2.Stop();
-        Console.WriteLine($"TimeTaken :: first = {s1.ElapsedMilliseconds} ms :: second = {s2.ElapsedMilliseconds} ms");
+        // Console.WriteLine($"TimeTaken :: first = {s1.ElapsedMilliseconds} ms :: second = {s2.ElapsedMilliseconds} ms");
     }
 
     // [Fact]

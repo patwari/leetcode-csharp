@@ -90,7 +90,6 @@ public class Solution {
             for (int i = 0; i < numberOfUsers; ++i) {
                 output[i] += allCount;
             }
-            Console.WriteLine($"processed :: all ALL :: output = {string.Join(",", output)}");
         }
 
         allCount = 0;
@@ -101,7 +100,7 @@ public class Solution {
     private class Event {
         public bool isMessage = false;
         public int time = -1;
-        public int[] ids = null;
+        public int[]? ids = null;
         public string specialId = "";      // "ALL", "HERE", "". If "" => then use ids.
     }
 }

@@ -68,9 +68,9 @@ public class Solution {
                 ++i;
             }
 
-#if DEBUG
-            Console.Write(currNameSb.ToString());
-#endif
+            // #if DEBUG
+            //             Console.Write(currNameSb.ToString());
+            // #endif
 
             if (isFile) {
                 longestFilename = Math.Max(longestFilename, parentLen + currNameLen);

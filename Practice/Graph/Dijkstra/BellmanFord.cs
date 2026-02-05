@@ -18,43 +18,44 @@ public class BellmanFord {
         if (destIdx < 0 || destIdx >= V) return -1;
         // 1. relax V-1 time
 
-        int relaxedCount = 0;
-        bool isRelaxed = true;
         int[] minDist = new int[V];
         for (int i = 0; i < V; ++i)
             minDist[i] = int.MaxValue;
         minDist[sourceIdx] = 0;
 
-        while (relaxedCount < V && isRelaxed) {
-            isRelaxed = false;
+        for (int i = 0; i < V; ++i) {
+            bool isRelaxed = false;
 
             // for each edge just try to relax
             foreach (int[] e in edges) {
                 int s = e[0];
                 int d = e[1];
                 int w = e[2];
-                if (minDist[s] != int.MaxValue) {
-                    if (minDist[s] + w < minDist[d]) {
-                        minDist[d] = minDist[s] + w;
-                        isRelaxed = true;
+                if (minDist[s] != int.MaxValue && minDist[s] + w < minDist[d]) {
+                    if (i == V - 1) {
+                        // negative cycle reachable from source
+                        return -1;
                     }
+
+                    minDist[d] = minDist[s] + w;
+                    isRelaxed = true;
                 }
 
                 if (isBidirectional) {
-                    if (minDist[d] != int.MaxValue) {
-                        if (minDist[d] + w < minDist[s]) {
-                            minDist[s] = minDist[d] + w;
-                            isRelaxed = true;
+                    if (minDist[d] != int.MaxValue && minDist[d] + w < minDist[s]) {
+                        if (i == V - 1) {
+                            // negative cycle reachable from source
+                            return -1;
                         }
+                        minDist[s] = minDist[d] + w;
+                        isRelaxed = true;
                     }
                 }
             }
-            ++relaxedCount;
-        }
 
-        if (relaxedCount == V) {
-            Console.WriteLine($"Negative cycle found. Cannot reach the destination.");
-            return -1;
+            if (!isRelaxed) {
+                break;
+            }
         }
 
         if (minDist[destIdx] == int.MaxValue)
